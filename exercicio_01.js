@@ -10,15 +10,19 @@ class Animal {
   }
 
   mostrarAtributos(){
-    return this.atributos();
+    try {
+      return this.atributos()
+  } catch(erro){
+      console.log(erro.stack)
+  }
   } 
 
   atributos() {
-    return {
-      nome: this.nome,
-      idade: this.idade,
-      especie: this.especie
-    };
+      if(this.nome != "" && this.idade != "" && this.especie != ""){
+      return this.nome + this.sobrenome
+      } else{
+          throw new Error("Falta preencher algum dado.")
+    }
   }
 }
 

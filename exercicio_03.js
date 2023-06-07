@@ -6,15 +6,19 @@ class NerdIF {
   }
 
   retornarAtributos() {
-    return this.atributos()
+    try {
+      return this.atributos()
+  } catch(erro){
+      console.log(erro.stack)
+  }
   }
 
   atributos() {
-    return {
-      estudante: this.estudante,
-      cosplay: this.cosplay,
-      nota_cosplay: this.nota_cosplay
-    };
+    if(this.estudante != "" && this.cosplay != "" && this.nota_cosplay != ""){
+      return this.nome + this.sobrenome
+      } else{
+          throw new Error("Falta preencher algum dado.")
+    }
   }
 }
 

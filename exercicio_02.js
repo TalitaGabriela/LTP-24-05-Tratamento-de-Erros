@@ -10,15 +10,19 @@ class Estudante {
   }
 
   mostrarAtributos() {
-    return this.atributos();
+    try {
+      return this.atributos()
+  } catch(erro){
+      console.log(erro.stack)
   }
+}
 
   atributos() {
-    return {
-      nome: this.nome,
-      idade: this.idade,
-      turma: this.turma
-    };
+    if(this.nome != "" && this.idade != "" && this.turma != ""){
+      return this.nome + this.sobrenome
+      } else{
+          throw new Error("Falta preencher algum dado.")
+    }
   }
 }
 
