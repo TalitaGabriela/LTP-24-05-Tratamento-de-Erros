@@ -15,7 +15,7 @@ class NerdIF {
 
   atributos() {
     if(this.estudante != "" && this.cosplay != "" && this.nota_cosplay != ""){
-      return this.nome + this.sobrenome
+      return this.estudante + ", " + this.cosplay + ", " + this.nota_cosplay +  "."
       } else{
           throw new Error("Falta preencher algum dado.")
     }

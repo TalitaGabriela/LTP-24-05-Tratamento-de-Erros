@@ -19,7 +19,7 @@ class Estudante {
 
   atributos() {
     if(this.nome != "" && this.idade != "" && this.turma != ""){
-      return this.nome + this.sobrenome
+      return this.nome + ", " + this.idade + ", " + this.turma +  "."
       } else{
           throw new Error("Falta preencher algum dado.")
     }
