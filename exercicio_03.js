@@ -29,4 +29,3 @@ const atributos = aluno.retornarAtributos();
 console.log(atributos.estudante); 
 console.log(atributos.cosplay);   
 console.log(atributos.nota_cosplay);
-
