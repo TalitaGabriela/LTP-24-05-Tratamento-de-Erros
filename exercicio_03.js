@@ -26,6 +26,6 @@ const aluno = new NerdIF("João", "Homem-Aranha", 9.5);
 const atributos = aluno.retornarAtributos();
 
 
-console.log(atributos.estudante); 
-console.log(atributos.cosplay);   
+console.log(atributos.estudante);
+console.log(atributos.cosplay);
 console.log(atributos.nota_cosplay);
