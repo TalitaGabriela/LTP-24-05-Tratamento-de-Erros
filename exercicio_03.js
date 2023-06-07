@@ -9,16 +9,25 @@ class NerdIF {
     try {
       return this.atributos()
   } catch(erro){
-      console.log(erro.stack)
+      return console.log(erro.name)
   }
   }
 
   atributos() {
     if(this.estudante != "" && this.cosplay != "" && this.nota_cosplay != ""){
-      return this.estudante + ", " + this.cosplay + ", " + this.nota_cosplay +  "."
+      return this.estudante,
+             this.cosplay,
+             this.nota_cosplay
       } else{
-          throw new Error("Falta preencher algum dado.")
+        throw new MeuErro("Falta preencher algum dado.");
     }
+  }
+}
+
+class MeuErro extends Error {
+  constructor(message){
+    super(message);
+    this.name = "Meu Erro";
   }
 }
 

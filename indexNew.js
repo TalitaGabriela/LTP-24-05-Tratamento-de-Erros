@@ -25,5 +25,5 @@ const pessoa = new Pessoa("","Picolo");
 console.log(pessoa.mostrar())
 
 //name
-//name
+//message
 //stack
