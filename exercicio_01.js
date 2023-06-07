@@ -19,7 +19,7 @@ class Animal {
 
   atributos() {
       if(this.nome != "" && this.idade != "" && this.especie != ""){
-      return this.nome + this.sobrenome
+      return this.nome + ", " + this.idade + ", " + this.especie +  "."
       } else{
           throw new Error("Falta preencher algum dado.")
     }
@@ -33,4 +33,3 @@ const atributos = meuAnimal.mostrarAtributos();
 console.log(atributos.nome);   
 console.log(atributos.idade);  
 console.log(atributos.especie); 
-
