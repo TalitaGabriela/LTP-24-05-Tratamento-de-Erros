@@ -27,10 +27,9 @@ class Estudante {
 }
 
 const estudante = new Estudante("João", 16, "3A");
-
 const atributos = estudante.mostrarAtributos();
+
 
 console.log(atributos.nome);   
 console.log(atributos.idade);  
 console.log(atributos.turma); 
-

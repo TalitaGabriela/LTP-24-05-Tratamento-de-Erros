@@ -29,6 +29,7 @@ class Animal {
 const meuAnimal = new Animal("Fido", 3, "cachorro");
 const atributos = meuAnimal.mostrarAtributos();
 
+
 // Imprimindo os atributos
 console.log(atributos.nome);   
 console.log(atributos.idade);  
