@@ -13,15 +13,15 @@ class Estudante {
     try {
       return this.atributos()
   } catch(erro){
-      
+      return erro
   }
 }
 
   atributos() {
     if(this.nome != "" && this.idade != "" && this.turma != ""){
-      return this.nome, 
-             this.idade,
-             this.turma
+      return {nome: this.nome,
+             idade: this.idade,
+             turma: this.turma};
       } else{
         throw new MeuErro("Falta preencher algum dado.");
     }
@@ -36,9 +36,4 @@ class MeuErro extends Error {
 }
 
 const estudante = new Estudante("João", 16, "3A");
-const atributos = estudante.mostrarAtributos();
-
-
-console.log(atributos.nome);  
-console.log(atributos.idade);  
-console.log(atributos.turma); 
+console.log(estudante.mostrarAtributos());

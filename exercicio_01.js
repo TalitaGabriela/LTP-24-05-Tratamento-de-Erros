@@ -19,9 +19,9 @@ class Animal {
 
   atributos() {
       if(this.nome != "" && this.idade != "" && this.especie != ""){
-      return this.nome,
-             this.idade,
-             this.especie
+      return{nome: this.nome,
+             idade: this.idade,
+             especie: this.especie};
       } else{
         throw new MeuErro("Falta preencher algum dado.");
     }
@@ -36,10 +36,4 @@ class MeuErro extends Error {
 }
 
 const meuAnimal = new Animal("Fido", 3, "cachorro");
-const atributos = meuAnimal.mostrarAtributos();
-
-console.log(atributos)
-// Imprimindo os atributos//
-console.log(atributos.nome);   
-console.log(atributos.idade);  
-console.log(atributos.especie); 
+console.log(meuAnimal.mostrarAtributos());

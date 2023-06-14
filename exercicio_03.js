@@ -9,15 +9,15 @@ class NerdIF {
     try {
       return this.atributos()
   } catch(erro){
-      return console.log(erro.name)
+      return erro
   }
   }
 
   atributos() {
     if(this.estudante != "" && this.cosplay != "" && this.nota_cosplay != ""){
-      return this.estudante,
-             this.cosplay,
-             this.nota_cosplay
+      return{ estudante: this.estudante,
+              cosplay: this.cosplay,
+              nota_cosplay: this.nota_cosplay};
       } else{
         throw new MeuErro("Falta preencher algum dado.");
     }
@@ -31,10 +31,5 @@ class MeuErro extends Error {
   }
 }
 
-const aluno = new NerdIF("João", "Homem-Aranha", 9.5);
-const atributos = aluno.retornarAtributos();
-
-
-console.log(atributos.estudante);
-console.log(atributos.cosplay);
-console.log(atributos.nota_cosplay);
+const aluno = new NerdIF("João", "Homem-Aranha",9.5);
+console.log(aluno.retornarAtributos());
